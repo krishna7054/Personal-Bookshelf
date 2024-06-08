@@ -1,0 +1,189 @@
+.App {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color:rgba(0, 50, 82, 0.57);
+  border-radius: 10px;
+}
+
+nav a {
+  text-decoration:none;
+  font-style: italic;
+  font-size: x-large;
+  color: #f6ecec;
+  padding: 10px;
+}
+.bookshelf {
+  margin: 20px;
+}
+.h2{
+  display: flex;
+  justify-content: center;
+}
+
+.book-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.book-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 200px;
+  
+  
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+}
+
+.book-card h3 {
+  margin-top: 0;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+button {
+  --color: #560bad;
+  font-family: inherit;
+  display: inline-block;
+  width: 13em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 10px;
+  margin-left:5px ;
+  margin-right:5px ;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color .5s;
+  z-index: 1;
+  font-size: 15px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+ }
+ 
+ button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+ }
+ 
+ button:hover {
+  color: #fff;
+ }
+ 
+ button:before {
+  top: 100%;
+  left: 100%;
+  transition: all .7s;
+ }
+ 
+ button:hover:before {
+  top: -30px;
+  left: -10px;
+ }
+ 
+ button:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+ }
+
+.inputGroup {
+  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 1em 20em 1em 20em;
+  max-width: 100%;
+  position: relative;
+}
+
+.inputGroup input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+.inputGroup input:focus + label,
+.inputGroup input:valid + label {
+  transform: translateY(-50%) scale(.9);
+  margin: 0;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #ffffff;
+}
+
+.inputGroup input:focus {
+  border-color: rgb(150, 150, 200);
+}
+
+@media (max-width: 768px) {
+  .book-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .book-card {
+    width: 100%;
+  }
+
+  .inputGroup {
+    display: flex;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 1em 1em 1em;
+    max-width: 100%;
+    position: relative;
+  }
+}
+
+@media (max-width: 820px) {
+  .book-list {
+    flex-wrap: wrap;
+  gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .book-card {
+    width: 200px;
+  }
+
+  .inputGroup {
+    display: flex;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 1em 1em 1em;
+    max-width: 100%;
+    position: relative;
+  }
+}
